@@ -1,16 +1,16 @@
-/*! HTML5 Boilerplate v6.1.0 | MIT License | https://html5boilerplate.com/ */
+/*! HT  ML5 Boilerplate v6.1.0 | MIT License | https://html5boilerplate.com/ */
 
 
 /*
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
+* What follows is the result of much research on cross-browser styling.
+* Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+* Kroc Camen, and the H5BP dev community and team.
+*/
 
 
 /* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
+Base styles: opinionated defaults
+========================================================================== */
 
 html {
     color: #222;
@@ -20,29 +20,29 @@ html {
 
 
 /*
- * Remove text-shadow in selection highlight:
- * https://twitter.com/miketaylr/status/12228805301
- *
- * Vendor-prefixed and regular ::selection selectors cannot be combined:
- * https://stackoverflow.com/a/16982510/7133471
- *
- * Customize the background color to match your design.
- */
+* Remove text-shadow in selection highlight:
+* https://twitter.com/miketaylr/status/12228805301
+*
+* Vendor-prefixed and regular ::selection selectors cannot be combined:
+* https://stackoverflow.com/a/16982510/7133471
+*
+* Customize the background color to match your design.
+*/
 
-::-moz-selection {
+ ::-moz-selection {
     background: #b3d4fc;
     text-shadow: none;
 }
 
-::selection {
+ ::selection {
     background: #b3d4fc;
     text-shadow: none;
 }
 
 
 /*
- * A better looking default horizontal rule
- */
+* A better looking default horizontal rule
+*/
 
 hr {
     display: block;
@@ -55,10 +55,10 @@ hr {
 
 
 /*
- * Remove the gap between audio, canvas, iframes,
- * images, videos and the bottom of their containers:
- * https://github.com/h5bp/html5-boilerplate/issues/440
- */
+* Remove the gap between audio, canvas, iframes,
+* images, videos and the bottom of their containers:
+* https://github.com/h5bp/html5-boilerplate/issues/440
+*/
 
 audio,
 canvas,
@@ -71,8 +71,8 @@ video {
 
 
 /*
- * Remove default fieldset styles.
- */
+* Remove default fieldset styles.
+*/
 
 fieldset {
     border: 0;
@@ -82,8 +82,8 @@ fieldset {
 
 
 /*
- * Allow only vertical resizing of textareas.
- */
+* Allow only vertical resizing of textareas.
+*/
 
 textarea {
     resize: vertical;
@@ -91,8 +91,8 @@ textarea {
 
 
 /* ==========================================================================
-   Browser Upgrade Prompt
-   ========================================================================== */
+Browser Upgrade Prompt
+========================================================================== */
 
 .browserupgrade {
     margin: 0.2em 0;
@@ -103,8 +103,8 @@ textarea {
 
 
 /* ==========================================================================
-   font families used in the project
-   ========================================================================== */
+font families used in the project
+========================================================================== */
 
 
 /*
@@ -115,8 +115,22 @@ font-family: 'Libre Baskerville', serif;            titulos
 
 
 /* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
+color palete used in the project
+========================================================================== */
+
+
+/*
+kinda white E7EDED
+silver      97A29E
+dark green  4D5C33
+blue gray   3B525E
+dark blue   020718
+*/
+
+
+/* ==========================================================================
+Author's custom styles
+========================================================================== */
 
 html {
     box-sizing: border-box;
@@ -129,7 +143,34 @@ html {
 }
 
 body {
-    background-color: f2f2f2;
+    background-color: #E7EDED;
+}
+
+h2 {
+    font-family: 'Libre Baskerville', serif;
+    color: #020718;
+    font-size: 2em;
+    text-align: center;
+}
+
+h2::after {
+    content: '';
+    margin: 0 auto;
+    background-image: url(../img/separador2chico.png);
+    height: 30px;
+    width: 200px;
+    display: block;
+}
+
+.seccion {
+    padding: 30px;
+}
+
+p {
+    font-family: 'Source Code Pro', monospace;
+    color: #020718;
+    font-size: 1.2em;
+    text-align: justify;
 }
 
 div.hero {
@@ -168,7 +209,7 @@ div.contenido-header {
     }
 }
 
-@media only screen and (min-width:992px) {
+@media only screen and (min-width:1000px) {
     .contenedor {
         width: 98%;
         max-width: 1100px;
@@ -222,32 +263,35 @@ div.informacion-evento p i {
 
 p.ciudad {
     float: right;
+    color: #E7EDED;
 }
 
 h1.nombre-sitio {
     font-size: 6.5vw;
     margin: 0;
     font-family: 'Libre Baskerville', serif;
+    color: #E7EDED;
 }
 
 @media only screen and (min-width:768px) {
     h1.nombre-sitio {
         font-size: 7.5vw;
-        margin: 0;
         font-family: 'Libre Baskerville', serif;
-        font-family: 'Bitter', serif;
+        color: #E7EDED;
     }
 }
 
 p.slogan {
     font-size: 2.5vw !important;
     text-transform: none !important;
+    color: #E7EDED;
 }
 
 @media only screen and (min-width:768px) {
     p.slogan {
         font-size: 1.5vw !important;
         text-transform: none !important;
+        color: #E7EDED;
     }
 }
 
@@ -257,7 +301,7 @@ div.barra {
 }
 
 div.logo {
-    width: 80%;
+    width: 250px;
     float: left;
 }
 
@@ -267,7 +311,7 @@ div.logo img {
 
 @media only screen and (min-width:768px) {
     div.logo {
-        width: 33%;
+        width: 350px;
         float: left;
     }
 }
@@ -276,7 +320,7 @@ nav.navegacion-principal {
     display: none;
 }
 
-@media only screen and (min-width:768px) {
+@media only screen and (min-width:1100px) {
     nav.navegacion-principal {
         width: 67%;
         float: right;
@@ -291,10 +335,24 @@ nav.navegacion-principal a {
     font-size: 1.4em;
     text-transform: uppercase;
     text-decoration: none;
-    padding: 5px 10px;
-    line-height: 60px;
-    display: inline-block;
-    transition: all .6s ease;
+    line-height: 30px;
+    display: block;
+    text-align: center;
+    margin: auto;
+}
+
+@media only screen and (min-width:1100px) {
+    nav.navegacion-principal a {
+        font-family: 'Bitter', serif;
+        color: #E7EDED;
+        font-size: 1.4em;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 5px 10px;
+        line-height: 60px;
+        display: inline-block;
+        transition: all .6s ease;
+    }
 }
 
 nav.navegacion-principal a:hover {
@@ -324,21 +382,99 @@ div.menu-movil span {
     display: block;
 }
 
-@media only screen and (min-width:768px) {
+@media only screen and (min-width:1100px) {
     div.menu-movil {
         display: none;
     }
 }
 
+section.programa {
+    position: relative;
+}
+
+div.contenido-programa {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+div.programa-evento {
+    background-color: rgb(231, 237, 237, .8);
+    padding: 15px;
+    margin-top: 80px;
+}
+
+@media only screen and (min-width:768px) {
+    div.programa-evento {
+        width: 70%;
+    }
+}
+
+@media only screen and (min-width:992px) {
+    div.programa-evento {
+        width: 50%;
+    }
+}
+
+nav.menu-programa {
+    width: 100%;
+    border-bottom: 1px solid #4D5C33;
+    padding-bottom: 5px;
+}
+
+@media only screen and (min-width:992px) {
+    nav.menu-programa {
+        display: table;
+    }
+}
+
+nav.menu-programa a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #3B525E;
+    font-family: 'Bitter', serif;
+    margin-bottom: 5px;
+    font-size: 1.2em;
+}
+
+@media only screen and (min-width:992px) {
+    nav.menu-programa a {
+        display: table-cell;
+    }
+}
+
+nav.menu-programa a i {
+    color: #4D5C33;
+    font-size: 1.35em;
+    margin-right: 10px;
+}
+
+div.contenedor-video {
+    position: relative;
+}
+
+video.video-rep {
+    overflow: hidden;
+}
+
 
 /* ==========================================================================
-   Helper classes
-   ========================================================================== */
+Helper classes
+========================================================================== */
 
 
 /*
- * Hide visually and from screen readers
- */
+
+kinda white E7EDED
+silver      97A29E
+dark green  4D5C33
+blue gray   3B525E
+dark blue   020718
+* Hide visually and from screen readers
+*/
 
 .hidden {
     display: none !important;
@@ -346,13 +482,13 @@ div.menu-movil span {
 
 
 /*
- * Hide only visually, but have it available for screen readers:
- * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- *
- * 1. For long content, line feeds are not interpreted as spaces and small width
- *    causes content to wrap 1 word per line:
- *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
- */
+* Hide only visually, but have it available for screen readers:
+* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+*
+* 1. For long content, line feeds are not interpreted as spaces and small width
+*    causes content to wrap 1 word per line:
+*    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+*/
 
 .visuallyhidden {
     border: 0;
@@ -369,10 +505,10 @@ div.menu-movil span {
 
 
 /*
- * Extends the .visuallyhidden class to allow the element
- * to be focusable when navigated to via the keyboard:
- * https://www.drupal.org/node/897638
- */
+* Extends the .visuallyhidden class to allow the element
+* to be focusable when navigated to via the keyboard:
+* https://www.drupal.org/node/897638
+*/
 
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
@@ -387,8 +523,8 @@ div.menu-movil span {
 
 
 /*
- * Hide visually and from screen readers, but maintain layout
- */
+* Hide visually and from screen readers, but maintain layout
+*/
 
 .invisible {
     visibility: hidden;
@@ -396,16 +532,16 @@ div.menu-movil span {
 
 
 /*
- * Clearfix: contain floats
- *
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    `contenteditable` attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that receive the `clearfix` class.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
+* Clearfix: contain floats
+*
+* For modern browsers
+* 1. The space content is one way to avoid an Opera bug when the
+*    `contenteditable` attribute is included anywhere else in the document.
+*    Otherwise it causes space to appear at the top and bottom of elements
+*    that receive the `clearfix` class.
+* 2. The use of `table` rather than `block` is only necessary if using
+*    `:before` to contain the top-margins of child elements.
+*/
 
 .clearfix:before,
 .clearfix:after {
@@ -421,10 +557,10 @@ div.menu-movil span {
 
 
 /* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
+EXAMPLE Media Queries for Responsive Design.
+These examples override the primary ('mobile first') styles.
+Modify as content requires.
+========================================================================== */
 
 @media only screen and (min-width: 35em) {
     /* Style adjustments for viewports that meet the condition */
@@ -439,10 +575,10 @@ div.menu-movil span {
 
 
 /* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request:
-   https://www.phpied.com/delay-loading-your-print-css/
-   ========================================================================== */
+Print styles.
+Inlined to avoid the additional HTTP request:
+https://www.phpied.com/delay-loading-your-print-css/
+========================================================================== */
 
 @media print {
     *,
@@ -466,9 +602,9 @@ div.menu-movil span {
         content: " (" attr(title) ")";
     }
     /*
-     * Don't show links that are fragment identifiers,
-     * or use the `javascript:` pseudo protocol
-     */
+* Don't show links that are fragment identifiers,
+* or use the `javascript:` pseudo protocol
+*/
     a[href^="#"]:after,
     a[href^="javascript:"]:after {
         content: "";
@@ -482,9 +618,9 @@ div.menu-movil span {
         page-break-inside: avoid;
     }
     /*
-     * Printing Tables:
-     * http://css-discuss.incutio.com/wiki/Printing_Tables
-     */
+* Printing Tables:
+* http://css-discuss.incutio.com/wiki/Printing_Tables
+*/
     thead {
         display: table-header-group;
     }

@@ -54,22 +54,81 @@
                 <span></span>
             </div>
 
-            <nav class="navegacion-principal">
+            <nav class="navegacion-principal clearfix">
                 <a href="#">Nosotros</a>
                 <a href="#">Sucursales</a>
                 <a href="#">Contacto</a>
                 <a href="#">Productos</a>
 
             </nav>
-
-
         </div>
     </div>
+
+    <section class="seccion contenedor">
+        <h2>
+            Quienes somos
+        </h2>
+
+        <p>
+            Hephaestus Tech es una empresa comprometida con el desarrollo de tecnología enfocada en la seguidad de las personas, asi como salvaguardar su patrimonio. Nos enfocamos en brindar productos de alta calidad y bajo costo que le permitan protejer a su familia.
+        </p>
+    </section>
+
+    <section class="programa">
+        <div class="contenedor-video">
+            <video autoplay loop muted poster="img/bg-video.jpg" width="100%" height="100%" class="video-rep">
+                <source src="img/video.mp4" type="video/mp4">
+                <source src="img/video.ogv" type="video/ogg">
+                <source src="img/video.webm" type="video/webm">
+            </video>
+        </div>
+
+        <div class="contenido-programa">
+            <div class="contenedor">
+                <div class="programa-evento">
+                    <h2>
+                        Sucursales
+                    </h2>
+                    <nav class="menu-programa">
+                        <a href="#america"><i class="fas fa-globe-americas"></i>America</a>
+                        <a href="#europa"><i class="fas fa-globe-africa"></i>Europe</a>
+                        <a href="#asia"><i class="fas fa-globe-asia"></i>Asia</a>
+                    </nav>
+
+                    <div id="america" class="info-curso ocultar clearfix">
+                        <div class="detalle-evento">
+                            <h3>
+                                Mexico
+                            </h3>
+                            <p>
+                                Tijuana, Baja California
+                            </p>
+                        </div>
+                        <div class="detalle-evento">
+                            <h3>
+                                USA
+                            </h3>
+                            <p>
+                                San Diego, California
+                            </p>
+                        </div>
+                        <a href="#" class="button float-right">Ver todos</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+
 
     <script src="js/vendor/modernizr-3.6.0.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script>
         window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')
+
     </script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
@@ -83,6 +142,7 @@
         ga.l = +new Date;
         ga('create', 'UA-XXXXX-Y', 'auto');
         ga('send', 'pageview')
+
     </script>
     <script src="https://www.google-analytics.com/analytics.js" async defer></script>
 </body>
