@@ -153,6 +153,13 @@ h2 {
     text-align: center;
 }
 
+h3 {
+    font-family: 'Libre Baskerville', serif;
+    color: #020718;
+    font-size: 1.3em;
+    margin-bottom: 0;
+}
+
 h2::after {
     content: '';
     margin: 0 auto;
@@ -166,11 +173,35 @@ h2::after {
     padding: 30px;
 }
 
+.button {
+    background-color: #4D5C33;
+    color: #E7EDED;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    font-family: 'Bitter', serif;
+    text-decoration: none;
+    font-size: .8em;
+    display: inline-block;
+    margin: 10px;
+}
+
+.button:hover {
+    background-color: #97A29E;
+    transition: all .8s ease;
+}
+
 p {
     font-family: 'Source Code Pro', monospace;
     color: #020718;
+    margin-top: 0;
     font-size: 1.2em;
     text-align: justify;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 div.hero {
@@ -454,10 +485,151 @@ nav.menu-programa a i {
 
 div.contenedor-video {
     position: relative;
+    height: 700px;
+    width: 360px;
+}
+
+@media only screen and (min-width:1400px) {
+    div.contenedor-video {
+        position: relative;
+        height: 700px;
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width:400px) {
+    div.contenedor-video {
+        position: relative;
+        height: 700px;
+        width: 100%;
+    }
 }
 
 video.video-rep {
+    object-fit: cover;
     overflow: hidden;
+}
+
+ul.lista-nosotros li {
+    padding: 10px;
+    float: left;
+}
+
+@media only screen and (min-width:480px) {
+    ul.lista-nosotros li {
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width:768px) {
+    ul.lista-nosotros li {
+        width: 33.3%;
+    }
+}
+
+div.nosotros {
+    position: relative;
+    overflow: hidden;
+}
+
+div.nosotros img {
+    width: 100%;
+    filter: grayscale(0);
+    transition: all .4s ease-in-out;
+}
+
+div.nosotros:hover img {
+    filter: grayscale(1);
+    transform: scale(1.1)
+}
+
+div.nosotros p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 15px 10px;
+    margin: 0;
+    background-color: rgba(2, 7, 24, 0.60);
+    width: 100%;
+    font-family: 'Bitter', serif;
+    color: #97A29E;
+    transition: all .4s ease-in-out;
+}
+
+div.nosotros:hover p {
+    bottom: -80px;
+    opacity: 0;
+}
+
+.parallax::before {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+div.contador {
+    position: relative;
+    height: auto;
+}
+
+div.contador::before {
+    background-image: url(../img/bg-resumen.jpg);
+    content: '';
+}
+
+p.numero {
+    font-family: 'Libre Baskerville', serif;
+    color: #020718;
+    font-size: 3em;
+    display: block;
+    margin: 0 0 10px 0;
+    text-align: center;
+}
+
+ul.lista-precios>li {
+    padding: 10px;
+}
+
+@media only screen and (min-width:768px) {
+    ul.lista-precios>li {
+        float: left;
+        width: 33%;
+    }
+}
+
+div.tabla-precio {
+    border: 1px solid #3B525E;
+    background-color: rgba(77, 92, 51, .60);
+    padding: 40px 0;
+    text-align: center;
+    transition: all .3s ease;
+}
+
+div.tabla-precio ul li {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: #020718;
+    line-height: 15px;
+}
+
+div.tabla-precio ul li i {
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 5px;
+    font-size: 20px;
+    color: green;
+}
+
+div.tabla-precio:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 50px;
 }
 
 
@@ -468,11 +640,11 @@ Helper classes
 
 /*
 
-kinda white E7EDED
-silver      97A29E
-dark green  4D5C33
-blue gray   3B525E
-dark blue   020718
+kinda white #E7EDED
+silver      #97A29E
+dark green  #4D5C33
+blue gray   #3B525E
+dark blue   #020718
 * Hide visually and from screen readers
 */
 
