@@ -15,7 +15,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            Lista de Administradores
+            Lista de Productos
             <small></small>
         </h1>
 
@@ -34,8 +34,9 @@
                         <table id="registros" class="table table-bordered table-striped">
                             <thead>
                                 <tr>
-                                    <th>Usuario</th>
                                     <th>Nombre</th>
+                                    <th>Descripcion</th>
+                                    <th>Precio</th>
                                     <th>Acciones</th>
 
                                 </tr>
@@ -43,26 +44,29 @@
                             <tbody>
                                 <?php
                                 try{
-                                    $sql="SELECT id_admin,usuario,nombre FROM admins";
+                                    $sql="SELECT producto_id,nombre_producto,descripcion_producto,precio_producto FROM products";
                                     $resultado=$conn->query($sql);
                                 }catch(Exeption $e){
                                     $error=$e->getMessage();
                                     echo $error;
                                 }
-                                while($admin = $resultado->fetch_assoc() ) { ?>
+                                while($productos = $resultado->fetch_assoc() ) { ?>
                                 <tr>
                                     <td>
-                                        <?php echo $admin['usuario']; ?>
+                                        <?php echo $productos['nombre_producto']; ?>
                                     </td>
                                     <td>
-                                        <?php echo $admin['nombre']; ?>
+                                        <?php echo $productos['descripcion_producto']; ?>
+                                    </td>
+                                    <td>
+                                        <?php echo $productos['precio_producto']; ?>
                                     </td>
                                     <td>
 
-                                        <a href="editar-admin.php?id=<?php echo $admin['id_admin'] ?>" class="btn bg-orange btn-flat margin">
+                                        <a href="editar-producto.php?id=<?php echo $productos['producto_id'] ?>" class="btn bg-orange btn-flat margin">
                                             <i class="fa fa-pencil"></i>
                                         </a>
-                                        <a href="#" data-id="<?php echo $admin['id_admin']; ?>" data-tipo="admin" class="btn bg-maroon btn-flat margin borrar_registro">
+                                        <a href="#" data-id="<?php echo $productos['producto_id']; ?>" data-tipo="producto" class="btn bg-maroon btn-flat margin borrar_registro">
                                             <i class="fa fa-trash"></i>
                                         </a>
 
@@ -77,9 +81,11 @@
                             </tbody>
                             <tfoot>
                                 <tr>
-                                    <th>Usuario</th>
                                     <th>Nombre</th>
+                                    <th>Descripcion</th>
+                                    <th>Precio</th>
                                     <th>Acciones</th>
+
                                 </tr>
                             </tfoot>
                         </table>

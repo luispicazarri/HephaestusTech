@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $('#crear-admin').on('submit', function (e) {
+    $('#guardar-registro').on('submit', function (e) {
         e.preventDefault();
 
         var datos = $(this).serializeArray();
@@ -10,83 +10,72 @@ $(document).ready(function () {
             url: $(this).attr('action'),
             dataType: 'json',
             success: function (data) {
+                console.log(data);
                 var resultado = data; //para convertir la cadena 
                 if (resultado.respuesta == 'exito') {
                     swal(
                         'Correcto',
-                        'El administrador se creo correctamente',
+                        'Se guardo correctamente',
                         'success'
                     );
-                } else{
+                } else {
                     swal(
-                    'Error',
-                    'El administrador no se creo correctamente',
-                    'error'
-                );
-                
-                }
+                        'Error',
+                        'Hubo un error',
+                        'error'
+                    );
 
-            },
-            error: function (data) {
-                var resultado = data;
-                console.error(data);
-                swal(
-                    'Error',
-                    'El administrador no se creo correctamente',
-                    'error'
-                );
+                }
 
             }
         });
     });
-    
-    
-        $('#login-admin').on('submit', function (e) {
+
+    $('.borrar_registro').on('click', function (e) {
         e.preventDefault();
 
-        var datos = $(this).serializeArray();
-
-        $.ajax({
-            type: $(this).attr('method'),
-            data: datos,
-            url: $(this).attr('action'),
-            dataType: 'json',
-            success: function (data) 
-            {
-                var resultado = data; //para convertir la cadena 
-                if (resultado.respuesta == 'exitoso') 
-                {
-                    swal(
-                        'Login Correcto',
-                        'Holoooo'+resultado.usuario+'!!',
-                        'success'
+        var id = $(this).attr('data-id');
+        var tipo = $(this).attr('data-tipo');
+        swal({
+            title: 'Estas Seguro?',
+            text: "Si lo eliminar no podras recuperarlo!",
+            type: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Eliminar',
+            cancelButtonText: 'Cancelar'
+        }).then(function () {
+            $.ajax({
+                type: 'post',
+                data: {
+                    'id': id,
+                    'registro': 'eliminar'
+                },
+                url: 'modelo-' + tipo + '.php',
+                success: function (data) {
+                    var resultado = JSON.parse(data);
+                    if (resultado.respuesta == 'exito') {
+                        swal(
+                            'Eliminado!',
+                            'Registro eliminado',
+                            'success'
                         );
-                    setTimeout(function(){
-                        window.location.href='admin-area.php';
-                    },2000);
-                } else
-                {
-                    swal(
-                    'Error',
-                    'Usuario o password incorrectos',
-                    'error'
-                    );
-                
+                        jQuery('[data-id="' + resultado.id_eliminado + '"]').parents('tr').remove();
+
+                    } else {
+                        swal(
+                            'Error',
+                            'Hubo un error',
+                            'error'
+                        );
+                    }
+
+
                 }
+            });
 
-            },
-            error: function (data) 
-            {
-                var resultado = data;
-                console.error(data);
-                swal(
-                    'Error',
-                    'Usuario o password incorrectos',
-                    'error'
-                    );
-
-            }
         });
-    });
 
+    });
 });

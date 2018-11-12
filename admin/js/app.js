@@ -3,7 +3,7 @@
     
     $('#registros').DataTable({
       'paging'      : true,
-      'pageLength'  : 3, 
+      'pageLength'  : 10, 
       'lengthChange': false,
       'searching'   : true,
       'ordering'    : true,
@@ -24,3 +24,20 @@
   });
 
  });
+
+$('#crear-registro_admin').attr('disabled',true); 
+
+$('#repetir_password').on('input',function(){
+    var password_nuevo= $('#password').val();
+    if($(this).val() == password_nuevo){
+        $('#resultado_password').text('correcto');
+        $('#resultado_password').parents('.form-group').addClass('has-success').removeClass('has-error');
+        $('input#password').parents('.form-group').addClass('has-success').removeClass('has-error');
+        $('#crear-registro_admin').attr('disabled',false); 
+    }else
+    {
+        $('#resultado_password').text('incorrecto');
+        $('#resultado_password').parents('.form-group').addClass('has-error').removeClass('has-success');
+        $('input#password').parents('.form-group').addClass('has-error').removeClass('has-success');
+    }
+});

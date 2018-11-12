@@ -5,8 +5,8 @@
       <!-- Sidebar user panel -->
       <div class="user-panel">
         
-        <div class="pull-left info">
-          <p>Lorena Camacho</p>
+        <div class="info">
+          <p><?php echo $_SESSION['nombre']; ?></p>
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
       </div>
@@ -43,8 +43,8 @@
             
           </a>
           <ul class="treeview-menu">
-            <li><a href="#"><i class="fa fa-list-ul"></i> Ver todos</a></li>
-            <li><a href="#"><i class="fa fa-plus-circle"></i> Agregar</a></li>
+            <li><a href="lista-producto.php"><i class="fa fa-list-ul"></i> Ver todos</a></li>
+            <li><a href="crear-producto.php"><i class="fa fa-plus-circle"></i> Agregar</a></li>
             
           </ul>
         </li>
@@ -62,7 +62,7 @@
             
           </ul>
         </li>  
-          
+        <?php if($_SESSION['nivel'] == 1): ?>
         
         <li class="treeview">
           <a href="#">
@@ -76,7 +76,7 @@
             
           </ul>
         </li>  
-
+          <?php endif; ?>
       </ul>
     </section>
     <!-- /.sidebar -->
