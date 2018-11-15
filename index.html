@@ -25,6 +25,7 @@
                 <nav class="redes-sociales">
                     <a href="http://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
                     <a href="http://www.youtube.com"><i class="fab fa-youtube"></i></a>
+                    <a href="http://www.instagram.com"><i class="fab fa-instagram"></i></a>
                 </nav>
                 <div class="informacion-evento">
                     <div class="clearfix">
@@ -55,23 +56,31 @@
             </div>
 
             <nav class="navegacion-principal clearfix">
-                <a href="#">Nosotros</a>
-                <a href="#">Sucursales</a>
-                <a href="#">Contacto</a>
-                <a href="#">Productos</a>
+                <a href="index.html" class="seleccionado">Inicio</a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="contacto.html">Contacto</a>
+                <a href="producto.html">Productos</a>
 
             </nav>
         </div>
     </div>
 
-    <section class="seccion contenedor">
+    <section class="seccion">
         <h2>
-            Quienes somos
+            Faltan
         </h2>
-
-        <p>
-            Hephaestus Tech es una empresa comprometida con el desarrollo de tecnología enfocada en la seguidad de las personas, asi como salvaguardar su patrimonio. Nos enfocamos en brindar productos de alta calidad y bajo costo que le permitan protejer a su familia.
-        </p>
+        <div class="cuenta-regresiva contenedor">
+            <ul class="clearfix">
+                <li>
+                    <p class="numero">14</p>Dias</li>
+                <li>
+                    <p class="numero">8</p>Horas</li>
+                <li>
+                    <p class="numero">7</p>Minutos</li>
+                <li>
+                    <p class="numero">15</p>Segundos</li>
+            </ul>
+        </div>
     </section>
 
 
@@ -87,33 +96,15 @@
         <div class="contenido-programa">
             <div class="contenedor">
                 <div class="programa-evento">
-                    <h2>
-                        Sucursales
-                    </h2>
-                    <nav class="menu-programa">
-                        <a href="#america"><i class="fas fa-globe-americas"></i>America</a>
-                        <a href="#europa"><i class="fas fa-globe-africa"></i>Europe</a>
-                        <a href="#asia"><i class="fas fa-globe-asia"></i>Asia</a>
-                    </nav>
-
                     <div id="america" class="info-curso ocultar clearfix">
-                        <div class="detalle-evento">
-                            <h3>
-                                Mexico
-                            </h3>
-                            <p>
-                                Tijuana, Baja California
-                            </p>
-                        </div>
-                        <div class="detalle-evento">
-                            <h3>
-                                USA
-                            </h3>
-                            <p>
-                                San Diego, California
-                            </p>
-                        </div>
-                        <a href="#" class="button float-right">Ver todos</a>
+                        <h2>
+                            Quienes somos
+                        </h2>
+
+                        <p>
+                            Hephaestus Tech es una empresa comprometida con el desarrollo de tecnología enfocada en la seguidad de las personas, asi como salvaguardar su patrimonio. Nos enfocamos en brindar productos de alta calidad y bajo costo que le permitan protejer a su familia.
+                        </p>
+                        <a href="contacto.html" class="button float-right">Contáctanos</a>
                     </div>
                 </div>
             </div>
@@ -147,6 +138,10 @@
         </ul>
     </section>
 
+    <div id="mapa" class="mapa">
+
+    </div>
+
     <section class="precios seccion">
         <h2>
             Producto
@@ -166,7 +161,7 @@
                             <li><i class="fas fa-check"></i>Manual de usuario</li>
                             <li><i class="fas fa-check"></i>Tecnico de instalación</li>
                         </ul>
-                        <a href="#" class="button">Comprar</a>
+                        <a href="producto.html" class="button">Comprar</a>
                     </div>
                 </li>
                 <li>
@@ -182,7 +177,7 @@
                             <li><i class="fas fa-check"></i>Manual de usuario</li>
                             <li><i class="fas fa-check"></i>Tecnico de instalación</li>
                         </ul>
-                        <a href="#" class="button">Comprar</a>
+                        <a href="producto.html" class="button">Comprar</a>
                     </div>
                 </li>
                 <li>
@@ -198,10 +193,22 @@
                             <li><i class="fas fa-check"></i>Manual de usuario</li>
                             <li><i class="fas fa-check"></i>Tecnico de instalación</li>
                         </ul>
-                        <a href="#" class="button">Comprar</a>
+                        <a href="producto.html" class="button">Comprar</a>
                     </div>
                 </li>
             </ul>
+        </div>
+    </section>
+
+    <section class="newsletter parallax">
+        <div class="contenido contenedor">
+            <p>
+                regístrate al newsletter:
+            </p>
+            <h3>
+                Hephaestus Tech
+            </h3>
+            <a href="#" class="button transparente">Registro</a>
         </div>
     </section>
 
@@ -209,14 +216,58 @@
         <h2>
             Testimoniales
         </h2>
-        <div class="testimonial">
-            <blockquote>
-                <p>
-                    Gracias a D.D.Alert se ha visto reducida la cantidad de personas que detenemos con aliento alcoholico.
-                </p>
-            </blockquote>
+        <div class="testimoniales contenedor clearfix">
+            <div class="testimonial">
+                <blockquote>
+                    <p>
+                        Gracias a D.D.Alert se ha visto reducida la cantidad de personas que detenemos con aliento alcoholico.
+                    </p>
+                    <footer class="info-testimonial clearfix">
+                        <img src="img/david.JPG" alt="No se encontro la foto" height="60px" width="60px">
+                        <cite>David Gutierrez <span>Policia Municipal</span></cite>
+                    </footer>
+                </blockquote>
+            </div>
+            <div class="testimonial">
+                <blockquote>
+                    <p>
+                        Considero que Hush Little Mama me ha apoyado mucho en el cuidado de mi bebe. Como madre soltera, lo recomiendo ampliamente.
+                    </p>
+                    <footer class="info-testimonial clearfix">
+                        <img src="img/Kelly.JPG" alt="No se encontro la foto" height="60px" width="60px">
+                        <cite>Kelly Inzunza <span>Madre de familia</span></cite>
+                    </footer>
+                </blockquote>
+            </div>
+            <div class="testimonial">
+                <blockquote>
+                    <p>
+                        Gracias a D.D.Alert aun tengo a mi hijo conmigo, no se que hubiera pasado si hubiera tomado el volante ese dia.
+                    </p>
+                    <footer class="info-testimonial clearfix">
+                        <img src="img/Bryan.JPG" alt="No se encontro la foto" height="60px" width="60px">
+                        <cite>El Bryan Silva <span>Padre de familia</span></cite>
+                    </footer>
+                </blockquote>
+            </div>
         </div>
     </section>
+
+    <footer class="site-footer">
+        <div class="contenedor clearfix">
+            <div class="menu">
+                <h3>Síguenos en <span>Redes</span></h3>
+                <nav class="redes-sociales">
+                    <a href="http://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+                    <a href="http://www.youtube.com"><i class="fab fa-youtube"></i></a>
+                    <a href="http://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                </nav>
+            </div>
+            <div class="imagen-footer">
+                <img src="img/hephaestusSmallLogo.png" alt="No se encontro la imagen" height="10%" width="10%">
+            </div>
+        </div>
+    </footer>
 
     <script src="js/vendor/modernizr-3.6.0.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>

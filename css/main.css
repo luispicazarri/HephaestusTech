@@ -390,7 +390,7 @@ nav.navegacion-principal a:hover {
     background-color: #97A29E;
 }
 
-nav.navegacion-principal a:last-child {
+nav.navegacion-principal a.seleccionado {
     color: #4D5C33;
 }
 
@@ -492,7 +492,7 @@ div.contenedor-video {
 @media only screen and (min-width:1400px) {
     div.contenedor-video {
         position: relative;
-        height: 700px;
+        height: 800px;
         width: 100%;
     }
 }
@@ -500,7 +500,7 @@ div.contenedor-video {
 @media only screen and (min-width:400px) {
     div.contenedor-video {
         position: relative;
-        height: 700px;
+        height: 800px;
         width: 100%;
     }
 }
@@ -632,6 +632,210 @@ div.tabla-precio:hover {
     box-shadow: 0px 0px 50px;
 }
 
+div.testimonial {
+    padding: 5px;
+}
+
+@media only screen and (min-width:768px) {
+    div.testimonial {
+        float: left;
+        width: 33.3%;
+    }
+}
+
+div.testimoniales {
+    padding-bottom: 20px;
+}
+
+blockquote {
+    background-color: white;
+    border: 1px solid #c2c2c2;
+    position: relative;
+    margin: 0 0 10px 0;
+    padding-bottom: 20px;
+}
+
+blockquote p {
+    text-align: justify !important;
+    font-size: 1em !important;
+    font-family: 'Bitter', serif;
+    padding: 10px 20px 0 75px;
+}
+
+blockquote p::before {
+    content: '\201c';
+    position: absolute;
+    left: 18px;
+    top: 6px;
+    font-size: 6rem;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    color: #020718;
+}
+
+footer.info-testimonial {
+    padding: 0;
+    background-color: transparent;
+}
+
+footer.info-testimonial img {
+    float: left;
+    width: 20%;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+
+footer.info-testimonial cite {
+    text-align: left;
+    color: #020718;
+    text-transform: uppercase;
+    font-size: 12px;
+    padding-top: 20px;
+    width: 66.6%;
+    float: right;
+    font-weight: bold;
+    font-style: normal;
+}
+
+footer.info-testimonial cite span {
+    color: #3B525E;
+    display: block;
+    text-transform: none;
+    font-style: italic;
+}
+
+section.newsletter {
+    position: relative;
+    height: auto;
+}
+
+section.newsletter::before {
+    background-image: url(../img/bg-newsletter.jpg);
+    content: '';
+}
+
+section.newsletter .contenido {
+    padding: 100px 0;
+    color: #E7EDED !important;
+    text-align: center !important;
+    position: relative;
+}
+
+section.newsletter .contenido p {
+    font-size: 1.2em;
+    text-transform: lowercase;
+    color: #E7EDED !important;
+    text-align: center !important;
+    text-shadow: -1px -1px 0 #020718, 1px -1px 0 #020718, -1px 1px 0 #020718, 1px 1px 0 #020718;
+}
+
+section.newsletter .contenido h3 {
+    color: #E7EDED;
+    text-transform: uppercase;
+    font-size: 7vw;
+    margin-top: 10px;
+    font-family: 'Libre Baskerville', serif;
+    text-shadow: -1px -1px 0 #020718, 1px -1px 0 #020718, -1px 1px 0 #020718, 1px 1px 0 #020718;
+}
+
+.button.transparente {
+    background-color: transparent;
+    border: 2px solid #E7EDED;
+    transition: all .8s ease;
+    margin-top: 50px;
+}
+
+.button.transparente:hover {
+    background-color: #E7EDED;
+    color: #020718;
+    border-color: #020718;
+}
+
+div.cuenta-regresiva ul li {
+    text-transform: uppercase;
+    font-family: 'Bitter', serif;
+    font-size: 2rem;
+    text-align: center;
+}
+
+@media only screen and (min-width:768px) {
+    div.cuenta-regresiva ul li {
+        width: 25%;
+        float: left;
+    }
+}
+
+footer {
+    background-color: #020718;
+    margin-top: 20px;
+}
+
+@media only screen and (min-width:768px) {
+    footer .contenedor>div {
+        color: #E7EDED;
+        width: 50%;
+        float: left;
+    }
+}
+
+@media only screen and (min-width:768px) {
+    div.imagen-footer img {}
+}
+
+div.menu h3 {
+    color: #E7EDED;
+    font-size: 2.5vw;
+    font-weight: normal;
+}
+
+footer .contenedor div {
+    color: #E7EDED;
+    padding: 0 20px;
+    font-size: 12px;
+    text-align-last: left;
+    width: 50%;
+    float: left;
+}
+
+div.imagen-footer img {
+    float: right;
+    width: 20%;
+    height: 20%;
+}
+
+div.contenedor div.mision {
+    width: 45%;
+    float: left;
+}
+
+div.contenedor div.vision {
+    width: 45%;
+    float: right;
+}
+
+div.mapa {
+    height: 420px;
+    background-color: green;
+}
+
+div.info-curso p {
+    margin: 10px;
+}
+
+div.info-curso h2 {
+    margin-top: 10px;
+}
+
+div.imagen-mmln {
+    margin: 0 70px;
+}
+
+div.imagen-mmln img {
+    display: block;
+    width: 100%;
+}
+
 
 /* ==========================================================================
 Helper classes
@@ -646,6 +850,13 @@ dark green  #4D5C33
 blue gray   #3B525E
 dark blue   #020718
 * Hide visually and from screen readers
+*/
+
+
+/*
+font-family: 'Bitter', serif;                       subtitulos
+font-family: 'Source Code Pro', monospace;          parrafos
+font-family: 'Libre Baskerville', serif;            titulos
 */
 
 .hidden {
