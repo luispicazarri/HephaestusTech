@@ -18,6 +18,30 @@
 </head>
 
 <body>
+
+    <header class="site-header">
+        <div class="hero">
+            <div class="contenido-header">
+                <nav class="redes-sociales">
+                    <a href="http://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+                    <a href="http://www.youtube.com"><i class="fab fa-youtube"></i></a>
+                    <a href="http://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                </nav>
+                <div class="informacion-evento">
+                    <div class="clearfix">
+                        <p class="ciudad"><a href="https://www.google.com/maps/place/Facultad+de+Ciencias+Qu%C3%ADmicas+e+Ingenier%C3%ADa/@32.5320768,-116.9682113,17z/data=!3m1!4b1!4m5!3m4!1s0x80d947c1a21e0cc3:0x38bb337fa215784c!8m2!3d32.5320723!4d-116.9660226"><i class="fas fa-globe-americas"></i></a> Tijuana, B.C. México</p>
+                    </div>
+
+                    <h1 class="nombre-sitio">
+                        Hephaestus Tech
+                    </h1>
+                    <p class="slogan">
+                        Forjamos el trueno con el que defiendes tu olimpo
+                    </p>
+                </div>
+            </div>
+        </div>
+    </header>
     <div class="barra">
         <div class="contenedor clearfix">
             <div class="logo">
@@ -40,6 +64,122 @@
         </div>
     </div>
 
+    <section class="seccion contenedor">
+        <h2>
+            Registro de Usuarios
+        </h2>
+        <form id="registro" class="registro" action="index.html" method="post">
+            <div id="datos_usuario" class="registro caja clearfix">
+                <div class="campo">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu Nombre">
+                </div>
+                <div class="campo">
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" id="apellido" name="apellido" placeholder="Tu Apellido">
+                </div>
+                <div class="campo">
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" name="email" placeholder="Tu Email">
+                </div>
+                <div id="error">
+
+                </div>
+            </div>
+            <div class="paquetes" id="paquetes">
+                <h2>
+                    Producto
+                </h2>
+                <ul class="lista-precios clearfix">
+                    <li>
+                        <div class="tabla-precio">
+                            <h3>
+                                D.D.Alert
+                            </h3>
+                            <p class="numero">
+                                $600
+                            </p>
+                            <ul>
+                                <li><i class="fas fa-check"></i>Producto</li>
+                                <li><i class="fas fa-check"></i>Manual de usuario</li>
+                            </ul>
+                            <div class="orden">
+                                <label for="pase_dia">Cantidad deseada:</label>
+                                <input type="number" min="0" id="pase_ddalert" size="3" placeholder="0">
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="tabla-precio">
+                            <h3>
+                                SmartDoor
+                            </h3>
+                            <p class="numero">
+                                $800
+                            </p>
+                            <ul>
+                                <li><i class="fas fa-check"></i>Producto</li>
+                                <li><i class="fas fa-check"></i>Manual de usuario</li>
+                            </ul>
+                            <div class="orden">
+                                <label for="pase_dia">Cantidad deseada:</label>
+                                <input type="number" min="0" id="pase_smartdoor" size="3" placeholder="0">
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="tabla-precio">
+                            <h3>
+                                Hush Little Mama
+                            </h3>
+                            <p class="numero">
+                                $750
+                            </p>
+                            <ul>
+                                <li><i class="fas fa-check"></i>Producto</li>
+                                <li><i class="fas fa-check"></i>Manual de usuario</li>
+                            </ul>
+                            <div class="orden">
+                                <label for="pase_dia">Cantidad deseada:</label>
+                                <input type="number" min="0" id="pase_hushlittlemama" size="3" placeholder="0">
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="resumen" id="resumen">
+                <h2>
+                    Pago y Extras
+                </h2>
+                <div class="caja clearfix">
+                    <div class="extras">
+                        <div class="orden">
+                            <label for="instalacion">Instalación $250</label>
+                            <input type="number" min="0" id="instalacion" size="3" placeholder="0">
+                        </div>
+                        <input type="button" id="calcular" class="button" value="Calcular">
+                    </div>
+                    <div class="total">
+                        <h3>
+                            Resumen:
+                        </h3>
+                        <div id="lista-productos">
+
+                        </div>
+                        <h3>
+                            Total:
+                        </h3>
+                        <div id="suma-total">
+
+                        </div>
+                        <input type="submit" id="btnRegistro" class="button" value="Pagar">
+                    </div>
+                </div>
+            </div>
+        </form>
+    </section>
+
+
     <footer class="site-footer">
         <div class="contenedor clearfix">
             <div class="menu">
@@ -61,6 +201,9 @@
         window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')
     </script>
     <script src="js/plugins.js"></script>
+    <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"></script>
+    <script src="js/jquery.animateNumber.js"></script>
+    <script src="js/jquery.countdown.js"></script>
     <script src="js/main.js"></script>
 
     <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->

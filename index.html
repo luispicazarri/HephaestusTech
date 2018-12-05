@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="css/all.css">
     <link href="https://fonts.googleapis.com/css?family=Bitter|Libre+Baskerville|Source+Code+Pro" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" />
 </head>
 
 <body>
@@ -69,16 +70,16 @@
         <h2>
             Faltan
         </h2>
-        <div class="cuenta-regresiva contenedor">
+        <div id="cuenta-regresiva" class="cuenta-regresiva contenedor">
             <ul class="clearfix">
                 <li>
-                    <p class="numero">14</p>Dias</li>
+                    <p id="dias" class="numero"></p>Dias</li>
                 <li>
-                    <p class="numero">8</p>Horas</li>
+                    <p id="horas" class="numero"></p>Horas</li>
                 <li>
-                    <p class="numero">7</p>Minutos</li>
+                    <p id="minutos" class="numero"></p>Minutos</li>
                 <li>
-                    <p class="numero">15</p>Segundos</li>
+                    <p id="segundos" class="numero"></p>Segundos</li>
             </ul>
         </div>
     </section>
@@ -273,9 +274,11 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script>
         window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')
-
     </script>
     <script src="js/plugins.js"></script>
+    <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"></script>
+    <script src="js/jquery.animateNumber.js"></script>
+    <script src="js/jquery.countdown.js"></script>
     <script src="js/main.js"></script>
 
     <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
@@ -287,7 +290,6 @@
         ga.l = +new Date;
         ga('create', 'UA-XXXXX-Y', 'auto');
         ga('send', 'pageview')
-
     </script>
     <script src="https://www.google-analytics.com/analytics.js" async defer></script>
 </body>
