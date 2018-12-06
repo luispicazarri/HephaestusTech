@@ -51,7 +51,7 @@
 
             ?>
             
-        <form role="form" name="guardar-registro" id="guardar-registro" method="post" action="modelo-admin.php">
+        <form role="form" name="guardar-registro" id="guardar-registro" method="post" action="modelo-producto.php">
               <div class="box-body">
                 <div class="form-group">
                   <label for="nombre">Nombre:</label>

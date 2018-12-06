@@ -16,7 +16,7 @@ $(document).ready(function () {
                 {
                     swal(
                         'Login Correcto',
-                        'Holoooo'+resultado.usuario+'!!',
+                        'Holoooo '+resultado.usuario+'!!',
                         'success'
                         );
                     setTimeout(function(){

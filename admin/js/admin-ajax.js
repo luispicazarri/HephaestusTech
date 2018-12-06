@@ -41,8 +41,8 @@ $(document).ready(function () {
             text: "Si lo eliminar no podras recuperarlo!",
             type: 'warning',
             showCancelButton: true,
-            confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
+            confirmButtonColor: '#d33',
+            cancelButtonColor: '#3085d6',
             confirmButtonText: 'Eliminar',
             cancelButtonText: 'Cancelar'
         }).then(function () {

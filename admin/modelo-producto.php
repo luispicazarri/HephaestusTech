@@ -38,20 +38,19 @@ if($_POST['registro'] == 'nuevo')
 
 if($_POST['registro'] == 'actualizar')
 {   
-    
     $nombre = $_POST['nombre_producto'];
     $descripcion = $_POST['descripcion_producto'];
     $precio = $_POST['precio_producto'];
     $id_registro = $_POST['id_registro'];
     try{
         $stmt = $conn->prepare("UPDATE products SET nombre_producto = ?, descripcion_producto = ?, precio_producto = ?, editado = NOW() WHERE producto_id = ?");
-        $stmt->bind_param("sss", $nombre, $descripcion, $precio); 
+        $stmt->bind_param("ssi", $nombre, $descripcion, $precio); 
         
        $stmt->execute();
        if($stmt->affected_rows){
            $respuesta = array(
              'respuesta' => 'exito',
-             'id_actualizado' => $id_registro
+             'id_actualizado' =>$id_registro
            );
        } else {
            $respuesta = array(
@@ -70,6 +69,7 @@ if($_POST['registro'] == 'actualizar')
     echo json_encode($respuesta);
 
 }
+
 
 if($_POST['registro'] == 'eliminar')
 {   
